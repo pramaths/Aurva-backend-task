@@ -23,6 +23,10 @@ app.use(cors());
 app.use('/api', scanRoutes);
 app.use('/api', resultRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Give me Job🚀🚀🚀');
+}); 
+
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
