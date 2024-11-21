@@ -53,7 +53,9 @@ const createRateLimiter = require('../middleware/rateLimiter');
  *       500:
  *         description: Server error occurred while fetching scan results.
  */
-router.get('/scan-results', createRateLimiter({ max: 10 }), resultController.getScanResults);
+router.get('/scan-results', 
+    // createRateLimiter({ max: 10 }), 
+    resultController.getScanResults);
 
 /**
  * Route to delete a scan result by ID.
@@ -94,6 +96,8 @@ router.get('/scan-results', createRateLimiter({ max: 10 }), resultController.get
  *       500:
  *         description: Server error occurred while deleting scan result.
  */
-router.delete('/scan-results/:id', createRateLimiter({ max: 5 }), resultController.deleteScanResult);
+router.delete('/scan-results/:id', 
+    // createRateLimiter({ max: 5 }), 
+    resultController.deleteScanResult);
 
 module.exports = router;

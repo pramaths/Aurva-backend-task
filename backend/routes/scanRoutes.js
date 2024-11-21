@@ -80,7 +80,7 @@ const createRateLimiter = require('../middleware/rateLimiter');
 
 router.post(
   '/scan', 
-  createRateLimiter({ max: 10 }), 
+  // createRateLimiter({ max: 10 }), 
   uploadHandler, 
   scanController.scanFile
 );
