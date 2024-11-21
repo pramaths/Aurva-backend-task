@@ -1,0 +1,92 @@
+{"error":"Operation `scanresults.insertOne()` buffering timed out after 10000ms","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T11:26:36.521Z"}
+{"error":"Operation `scanresults.insertOne()` buffering timed out after 10000ms","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T11:29:27.053Z"}
+{"error":"Operation `scanresults.insertOne()` buffering timed out after 10000ms","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T11:29:53.792Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:30:59.994Z"}
+{"level":"info","message":"File scanned successfully: cropped.png","sensitiveFieldsFound":[{"category":"PHI","count":1,"type":"MEDICAL_RECORD"},{"category":"PCI","count":1,"type":"CREDIT_CARD"}],"timestamp":"2024-11-21T11:31:07.466Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:32:45.261Z"}
+{"level":"info","message":"File scanned successfully: cropped.png","sensitiveFieldsFound":[{"category":"PHI","count":1,"type":"MEDICAL_RECORD"},{"category":"PCI","count":1,"type":"CREDIT_CARD"}],"timestamp":"2024-11-21T11:33:21.622Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:35:04.245Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:36:02.780Z"}
+{"level":"info","message":"File scanned successfully: abc.png","sensitiveFieldsFound":[{"category":"PHI","count":1,"type":"MEDICAL_RECORD"},{"category":"PCI","count":1,"type":"CREDIT_CARD"}],"timestamp":"2024-11-21T11:42:45.169Z"}
+{"level":"info","message":"File scanned successfully: abc.png","sensitiveFieldsFound":[{"category":"PHI","count":1,"type":"MEDICAL_RECORD"},{"category":"PCI","count":1,"type":"CREDIT_CARD"}],"timestamp":"2024-11-21T11:43:14.620Z"}
+{"level":"info","message":"File scanned successfully: abc.png","sensitiveFieldsFound":[{"category":"PHI","count":1,"type":"MEDICAL_RECORD"},{"category":"PCI","count":1,"type":"CREDIT_CARD"}],"timestamp":"2024-11-21T11:43:55.441Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:45:23.649Z"}
+{"error":"ScanResult validation failed: rawFile: Path `rawFile` is required.","fileName":"abc.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T11:45:39.272Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:46:34.184Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:46:42.041Z"}
+{"error":"ScanResult validation failed: rawFile: Path `rawFile` is required.","fileName":"abc.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T11:46:52.699Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:47:27.528Z"}
+{"error":"ScanResult validation failed: rawFile: Path `rawFile` is required.","fileName":"abc.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T11:47:33.232Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T11:48:58.874Z"}
+{"level":"info","message":"File scanned successfully: abc.png","sensitiveFieldsFound":[{"category":"PHI","count":1,"type":"MEDICAL_RECORD"},{"category":"PCI","count":1,"type":"CREDIT_CARD"}],"timestamp":"2024-11-21T11:49:09.396Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T13:25:54.964Z"}
+{"level":"info","message":"File scanned successfully: abc.png","sensitiveFieldsFound":[{"category":"PHI","count":1,"type":"MEDICAL_RECORD"},{"category":"PCI","count":1,"type":"CREDIT_CARD"}],"timestamp":"2024-11-21T13:26:04.172Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:43:42.931Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:43:52.795Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:44:41.606Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:44:45.680Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:47:41.654Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:47:45.133Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:47:53.898Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:48:12.508Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:48:16.454Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:48:22.153Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:52:02.865Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T14:57:35.574Z"}
+{"error":"Error scanning image with Gemini: fileManager is not defined","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T14:58:00.714Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:04:11.585Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:04:28.160Z"}
+{"error":"Error scanning image with Gemini: fileManager is not defined","fileName":"abc.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:04:46.976Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:08:21.967Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:10:46.911Z"}
+{"error":"Error scanning image with Gemini: fs is not defined","fileName":"abc.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:10:52.801Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:11:03.115Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:31:39.488Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:32:21.091Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:32:43.059Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:36:23.024Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:36:46.708Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:36:56.238Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:36:57.942Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:36:59.928Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:37:03.238Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:37:05.127Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:37:07.924Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:37:50.996Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:37:56.811Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:38:05.625Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:38:11.067Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:38:13.809Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:38:23.153Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:38:25.150Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:38:28.435Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:38:33.262Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:39:20.820Z"}
+{"geminiContent":"```json\n{\n  \"PII\": {\n    \"Aadhaar Number\": \"9723 1286 0354\",\n    \"Name\": \"Pramath S\",\n    \"Date of Birth\": \"11/08/2003\",\n    \"Gender\": \"Male\",\n    \"VID\": \"9178 7475 3563 2622\"\n  },\n  \"PHI\": {},\n  \"PCI\": {}\n}\n```\n","level":"info","message":"Image scanned successfully with Gemini: cropped.png","timestamp":"2024-11-21T15:49:11.914Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:50:34.349Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:50:43.906Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:50:46.161Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:50:48.461Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:51:05.262Z"}
+{"error":"Error scanning image with Gemini: ScanResult validation failed: sensitiveData: Path `sensitiveData` is required.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:51:36.353Z"}
+{"error":"Error scanning image with Gemini: ScanResult validation failed: sensitiveData: Path `sensitiveData` is required.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:52:06.026Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:52:20.143Z"}
+{"error":"Error scanning image with Gemini: ScanResult validation failed: sensitiveData: Path `sensitiveData` is required.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:52:28.682Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:52:45.094Z"}
+{"error":"Error scanning image with Gemini: ScanResult validation failed: sensitiveData: Path `sensitiveData` is required.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:52:51.402Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:53:02.395Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:53:16.994Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:53:22.937Z"}
+{"error":"Error scanning image with Gemini: Assignment to constant variable.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:53:29.047Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:55:20.660Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:55:29.698Z"}
+{"error":"Error scanning image with Gemini: Assignment to constant variable.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:55:38.716Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:56:05.872Z"}
+{"geminiContent":{"PCI":{},"PHI":{},"PII":{"Aadhaar Number":"9723 1286 0354","Date of Birth":"11/08/2003","Gender":"MALE","Name":"Pramath S","VID":"9178 7475 3563 2622"}},"level":"info","message":"Image scanned successfully with Gemini: cropped.png","timestamp":"2024-11-21T15:56:14.760Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:57:17.603Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T15:57:22.455Z"}
+{"level":"info","message":"Scan result deleted: 673f5677ba6f6510e058479a","timestamp":"2024-11-21T15:58:10.344Z"}
+{"error":"Error scanning image with Gemini: ScanResult validation failed: sensitiveData: Path `sensitiveData` is required.","fileName":"shreesha.jpg","level":"error","message":"File scanning error","timestamp":"2024-11-21T18:54:40.526Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T18:55:35.617Z"}
+{"geminiContent":{"PCI":{},"PHI":{},"PII":{"Aadhaar No":"2733 2262 7870","Address":"1/91 D Pandubettu Ambalpady Udupi, Udupi, Karnataka 576103","DOB":"22/06/2003","Enrollment No":"0000/00412/62369","Father's Name":"Narayana Nagappa Naik","Gender":"Male","Name":"Shreesha N","Phone":"9448215585"}},"level":"info","message":"Image scanned successfully with Gemini: shreesha.jpg","timestamp":"2024-11-21T18:55:40.718Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T19:04:18.137Z"}
