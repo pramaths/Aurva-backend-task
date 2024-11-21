@@ -106,7 +106,7 @@ export default function SensitiveDataScanner() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('https://aurva-backend-task.onrender.com/api/scan-file', formData, {
+      const response = await axios.post('aurva-backend-task-n979.vercel.app/api/scan-file', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
@@ -128,7 +128,7 @@ export default function SensitiveDataScanner() {
 
   const fetchScanResults = async () => {
     try {
-      const response = await axios.get('https://aurva-backend-task.onrender.com/api/scan-results');
+      const response = await axios.get('aurva-backend-task-n979.vercel.app/api/scan-results');
       setScanResults(response.data.results);
     } catch (err) {
       console.error('Failed to fetch scan results', err);
@@ -142,7 +142,7 @@ export default function SensitiveDataScanner() {
 
   const handleDeleteResult = async (id: string) => {
     try {
-      await axios.delete(`https://aurva-backend-task.onrender.com/api/scan-results/${id}`);
+      await axios.delete(`aurva-backend-task-n979.vercel.app/api/scan-results/${id}`);
       setScanResults(prev => prev.filter(result => result._id !== id));
       toast({
         title: "Success",
