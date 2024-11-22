@@ -101,3 +101,19 @@
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:12:14.209Z"}
 {"error":"Error scanning image with Gemini: Unsupported image type. Supported formats: JPG, PNG, WEBP, HEIC, HEIF","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-22T05:12:20.455Z"}
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:12:21.415Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:13:26.504Z"}
+{"geminiContent":{"PCI":{},"PHI":{},"PII":{"Aadhaar Number":"9723 1286 0354","Date of Birth":"11/08/2003","Name":"Pramath S","VID":"9178 7475 3563 2622"}},"level":"info","message":"Image scanned successfully with Gemini: cropped.png","timestamp":"2024-11-22T05:13:29.204Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:11:51.167Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:12:11.986Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:12:15.938Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:15:54.320Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:25:17.725Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:26:21.413Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:27:37.396Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:28:57.882Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:30:51.595Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:30:59.039Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:31:09.773Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:31:20.628Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:31:26.568Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T14:31:35.717Z"}
