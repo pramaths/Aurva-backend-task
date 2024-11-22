@@ -149,7 +149,7 @@ MONGO_URI=your-mongo-uri
 
 ## Video Demonstration
 
-[alt text](image.png)  
+![alt text](image.png)  
 
 [Watch the demo video here](./demo.mp4)
 
