@@ -1,5 +1,8 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { isValidImageType } = require("./fileUtils");
+const fs = require("fs");
+const path = require("path");
+const os = require("os");
 
 const { GoogleAIFileManager } = require("@google/generative-ai/server");
 
@@ -19,7 +22,29 @@ const scanImageWithGemini = async (file) => {
 
   const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash",  systemInstruction: `Always generate an output in JSON formate only, with the following structure:
+    {
+      "PII": {
+        structured output
+        
+      },
+      "PHI": {
+        structured output
+      },
+      "PCI": {
+        structured output
+      }
+    }
+      if you feel like there are other sensitive information, please include them in the output.
+      eg:{
+      "PII": {
+        "name": "John Doe",
+        "email": " [email protected]"},
+        "PHI": {
+  },
+  "PCI": {
+        }
+  }, Guideline: Always generate an output in JSON format only.`, });
 
   const result = await model.generateContent([
     `Image may contain PII (Personally Identifiable Information), PHI (Protected Health Information), or PCI (Payment Card Information). 
@@ -42,25 +67,48 @@ const scanImageWithGemini = async (file) => {
 };
 
 const scanPDFWithGemini = async (file) => {
-  // Code for scanning PDF files with Gemini
-
-  // Initialize GoogleGenerativeAI with your API_KEY.
   const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-  // Initialize GoogleAIFileManager with your API_KEY.
   const fileManager = new GoogleAIFileManager(process.env.API_KEY);
 
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",  // Specify the model to use
+    model: "gemini-1.5-flash", 
+    systemInstruction: `Always generate an output in JSON format only, with the following structure:
+    {
+      "PII": {
+        structured output
+      },
+      "PHI": {
+        structured output
+      },
+      "PCI": {
+        structured output
+      }
+    }
+      if you feel like there are other sensitive information, please include them in the output.
+      eg:{
+      "PII": {
+        "name": "John Doe",
+        "email": " [email protected]"},
+        "PHI": {
+  },
+  "PCI": {
+        }
+  }, Guideline: Always generate an output in JSON format only.`,
   });
 
   try {
-    // Upload the file dynamically using the uploaded file's original name
-    const uploadResponse = await fileManager.uploadFile(file.originalname, {
+    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'pdf-scan-'));
+    
+    const tempFilePath = path.join(tempDir, file.originalname);
+    
+    fs.writeFileSync(tempFilePath, file.buffer);
+
+    const uploadResponse = await fileManager.uploadFile(tempFilePath, {
       mimeType: file.mimetype,
-      displayName: file.originalname,  // Use the uploaded file's name for display
+      displayName: file.originalname,
     });
 
-    // Generate content from the uploaded file, request a summary
+    // Generate content from the uploaded file
     const result = await model.generateContent([
       {
         fileData: {
@@ -68,10 +116,25 @@ const scanPDFWithGemini = async (file) => {
           fileUri: uploadResponse.file.uri,
         },
       },
-      { text: "Can you summarize this document as a bulleted list?" },
+      {
+        text: `file may contain PII (Personally Identifiable Information), PHI (Protected Health Information), or PCI (Payment Card Information). 
+    Extract the details properly and return the result in JSON format only:
+    {
+      "PII": {
+        structured output
+      },
+      "PHI": {
+        structured output
+      },
+      "PCI": {
+        structured output
+      }
+    }`,
+      },
     ]);
 
-    // Return the summarized text response
+    fs.rmSync(tempDir, { recursive: true, force: true });
+
     return result.response.text();
   } catch (error) {
     console.error("Error during PDF scanning with Gemini:", error);

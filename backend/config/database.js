@@ -3,9 +3,11 @@ const logger = require('../utils/logger');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://pramaths848:MdNy3gukvjpzydQe@twitter.t29mhxx.mongodb.net/scanner?retryWrites=true&w=majority', {
+    console.log(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://pramaths848:MdNy3gukvjpzydQe@twitter.t29mhxx.mongodb.net/scanner?retryWrites=true&w=majority', {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 30000,
     });
     logger.info('MongoDB connected successfully');
   } catch (error) {

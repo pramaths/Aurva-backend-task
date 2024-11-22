@@ -13,8 +13,6 @@ RUN npm install
 # Copy the rest of the application
 COPY . .
 
-# Expose the port the backend runs on (e.g., 5000)
 EXPOSE 8000
 
-# Start the backend application
-CMD ["npm", ""]
+CMD ["npm", "start"]

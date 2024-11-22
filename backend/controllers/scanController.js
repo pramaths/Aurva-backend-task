@@ -83,12 +83,14 @@ const handleFileScan = async (file, geminiFunction, fileType) => {
 
 const processScanResult = async (file, geminiResult) => {
   const base64Content = convertBufferToBase64(file.buffer);
+  console.log("hey",base64Content?.length);
   const parsedGeminiResult = parseStringToJSON(geminiResult);
+  console.log("hey",parsedGeminiResult);
 
   const scanResult = new ScanResult({
     fileName: file.originalname,
     sensitiveData: parsedGeminiResult,
-    base64Content,
+    base64Image: base64Content,
   });
 
   await scanResult.save();

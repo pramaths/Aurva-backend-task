@@ -1,5 +1,4 @@
 const express = require('express');
-require('dotenv').config();
 const cors = require('cors');
 const scanRoutes = require('./routes/scanRoutes');
 const resultRoutes = require('./routes/resultRoutes');
@@ -7,7 +6,11 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./swagger');
 const connectDB = require('./config/database');
 const morgan = require('morgan');
+const path = require('path');
 
+const envFile = process.env.NODE_ENV === 'production' ? '../.env.production' : '../.env';
+
+require('dotenv').config({ path: path.resolve(__dirname, envFile) });
 
 const app = express();
 connectDB();
@@ -27,8 +30,8 @@ app.get('/', (req, res) => {
     res.send('Give me Job🚀🚀🚀');
 }); 
 
-
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+console.log('hey',process.env.BACKEND_PORT);
+app.listen(process.env.BACKEND_PORT, () => {
+    console.log(`Server is running on port ${process.env.BACKEND_PORT}`);
     }
 );
