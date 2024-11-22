@@ -3,7 +3,6 @@ const { scanImageWithGemini } = require('../utils/gemini');
 const ScanResult = require('../models/ScanResult');
 const logger = require('../utils/logger');
 
-
 exports.scanFile = async (req, res, next) => {
   try {
     if (!req.file) {
@@ -30,25 +29,24 @@ exports.scanFile = async (req, res, next) => {
 
 const handleImageScan = async (file) => {
   try {
-    var geminiResult = await scanImageWithGemini(file);
-    console.log("lol",geminiResult)
+    const geminiResult = await scanImageWithGemini(file); // Pass file directly if scanImageWithGemini supports buffer
+    console.log('lol', geminiResult);
 
-    const base64Image = convertImageToBase64(file.path);
-    geminiResult = parseStringToJSON(geminiResult)
+    const base64Image = convertBufferToBase64(file.buffer);
+    const parsedGeminiResult = parseStringToJSON(geminiResult);
+
     const scanResult = new ScanResult({
       fileName: file.originalname,
-      sensitiveData: (geminiResult),  // Save the raw JSON result (PII, PHI, PCI)
-      base64Image: base64Image,     // Save the Base64 encoded image
+      sensitiveData: parsedGeminiResult, // Save the raw JSON result (PII, PHI, PCI)
+      base64Image,                      // Save the Base64 encoded image
     });
 
-    console.log(scanResult)
+    console.log(scanResult);
     await scanResult.save();
 
     logger.info(`Image scanned successfully with Gemini: ${file.originalname}`, {
-      geminiContent: geminiResult,
+      geminiContent: parsedGeminiResult,
     });
-
-    fs.unlinkSync(file.path);
 
     return scanResult; 
   } catch (error) {
@@ -56,15 +54,14 @@ const handleImageScan = async (file) => {
   }
 };
 
-
-const convertImageToBase64 = (filePath) => {
+const convertBufferToBase64 = (buffer) => {
   try {
-    const imageBuffer = fs.readFileSync(filePath);
-    return imageBuffer.toString('base64');
+    return buffer.toString('base64');
   } catch (error) {
-    throw new Error('Error converting image to Base64: ' + error.message);
+    throw new Error('Error converting buffer to Base64: ' + error.message);
   }
 };
+
 
 
 function parseStringToJSON(inputString) {
