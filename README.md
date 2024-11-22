@@ -101,8 +101,9 @@ To run the entire system using Docker Compose, follow these steps:
    ```bash
    git clone https://github.com/pramaths/Aurva-backend-task.git
    ```   
+2. create env with same structure as .env.development
 
-4.  Navigate to the directory and Run the system with Docker Compose:
+3.  Navigate to the directory and Run the system with Docker Compose:
    ```bash
    docker-compose up
    ```
@@ -145,19 +146,12 @@ MONGO_URI=your-mongo-uri
 
 ---
 
-## Rate Limiter
-
-A rate limiter is implemented to avoid excessive use of resources and protect the API from abuse. It ensures that a limited number of requests can be processed within a defined time window.
-
-- Requests to the API are limited to a maximum of **100 requests per minute**. If you exceed this limit, you will receive a `429 Too Many Requests` response.
-
----
 
 ## Video Demonstration
 
-![System Demo](![alt text](image.png))  
+![System Demo]![alt text](image.png)  
 
-[Watch the demo video here](./demo.mp4.mp4)
+[Watch the demo video here](./demo.mp4)
 
 ---
 
@@ -168,4 +162,3 @@ A rate limiter is implemented to avoid excessive use of resources and protect th
 
 ---
 
-This README should provide a comprehensive understanding of the project, its setup, and how to use it. Feel free to replace placeholders with the actual image and video links, and adjust the setup steps based on your project's exact structure and requirements.
