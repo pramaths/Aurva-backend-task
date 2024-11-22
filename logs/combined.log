@@ -93,3 +93,11 @@
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T19:16:27.105Z"}
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-21T19:53:56.441Z"}
 {"geminiContent":{"PCI":{},"PHI":{},"PII":{"Aadhaar Number":"2733 2262 7870","Address":"1/91 D Pandubettu Ambalpady Udupi Udupi Karnataka 576103","Date of Birth":"22/06/2003","Enrollment Number":"0000/00412/62369","Father's Name":"Narayana Nagappa Naik","Name":"Shreesha N","Phone Number":"9448215585"}},"level":"info","message":"Image scanned successfully with Gemini: shreesha.jpg","timestamp":"2024-11-21T19:54:01.995Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:08:35.709Z"}
+{"error":"Error scanning image with Gemini: The \"path\" argument must be of type string or an instance of Buffer or URL. Received undefined","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-22T05:09:03.222Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:10:13.083Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:11:55.244Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:12:09.991Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:12:14.209Z"}
+{"error":"Error scanning image with Gemini: Unsupported image type. Supported formats: JPG, PNG, WEBP, HEIC, HEIF","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-22T05:12:20.455Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2024-11-22T05:12:21.415Z"}

@@ -14,3 +14,5 @@
 {"error":"Error scanning image with Gemini: Assignment to constant variable.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:53:29.047Z"}
 {"error":"Error scanning image with Gemini: Assignment to constant variable.","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-21T15:55:38.716Z"}
 {"error":"Error scanning image with Gemini: ScanResult validation failed: sensitiveData: Path `sensitiveData` is required.","fileName":"shreesha.jpg","level":"error","message":"File scanning error","timestamp":"2024-11-21T18:54:40.526Z"}
+{"error":"Error scanning image with Gemini: The \"path\" argument must be of type string or an instance of Buffer or URL. Received undefined","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-22T05:09:03.222Z"}
+{"error":"Error scanning image with Gemini: Unsupported image type. Supported formats: JPG, PNG, WEBP, HEIC, HEIF","fileName":"cropped.png","level":"error","message":"File scanning error","timestamp":"2024-11-22T05:12:20.455Z"}
