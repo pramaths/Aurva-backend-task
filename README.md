@@ -99,39 +99,15 @@ To run the entire system using Docker Compose, follow these steps:
 
 1. Clone both frontend and backend repositories if you haven't already:
    ```bash
-   git clone https://github.com/your-repo/frontend.git
-   git clone https://github.com/your-repo/backend.git
-   ```
+   git clone https://github.com/pramaths/Aurva-backend-task.git
+   ```   
 
-2. Navigate to the backend directory and build the Docker images:
-   ```bash
-   cd backend
-   docker build -t aurva-backend .
-   ```
-
-3. Set up Docker Compose. Create a `docker-compose.yml` file with the following content:
-   ```yaml
-   version: '3'
-   services:
-     frontend:
-       build: ./frontend
-       ports:
-         - "3000:3000"
-     backend:
-       build: ./backend
-       ports:
-         - "5000:5000"
-       environment:
-         - GEMINI_API_KEY=your-gemini-api-key
-         - MONGO_URI=your-mongo-uri
-   ```
-
-4. Run the system with Docker Compose:
+4.  Navigate to the directory and Run the system with Docker Compose:
    ```bash
    docker-compose up
    ```
 
-Now, you can access the frontend at `http://localhost:3000` and the backend at `http://localhost:5000`.
+Now, you can access the frontend at `http://localhost:3000` and the backend at `http://localhost:8000`.
 
 ---
 
