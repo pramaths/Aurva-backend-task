@@ -52,6 +52,8 @@ interface ScanResult {
   timestamp?: Date;
 }
 
+const apiBaseUrl = process.env.NEXT_PUBLIC_CLIENT_URL;
+
 export default function SensitiveDataScanner() {
   const { toast } = useToast();
   const [scanResults, setScanResults] = useState<ScanResult[]>([]);
@@ -106,7 +108,7 @@ export default function SensitiveDataScanner() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_CLIENT_URL}/api/scan`, formData, {
+      const response = await axios.post(`${apiBaseUrl}/api/scan`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
@@ -128,7 +130,7 @@ export default function SensitiveDataScanner() {
 
   const fetchScanResults = async () => {
     try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_CLIENT_URL}/api/scan-results`);
+      const response = await axios.get(`${apiBaseUrl}/api/scan-results`);
       setScanResults(response.data.results);
     } catch (err) {
       console.error('Failed to fetch scan results', err);
@@ -142,7 +144,7 @@ export default function SensitiveDataScanner() {
 
   const handleDeleteResult = async (id: string) => {
     try {
-      await axios.delete(`${process.env.NEXT_PUBLIC_CLIENT_URL}/api/scan-results/${id}`);
+      await axios.delete(`${apiBaseUrl}/api/scan-results/${id}`);
       setScanResults(prev => prev.filter(result => result._id !== id));
       toast({
         title: "Success",
