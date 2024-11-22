@@ -52,7 +52,7 @@ interface ScanResult {
   timestamp?: Date;
 }
 
-const apiBaseUrl = process.env.NEXT_PUBLIC_CLIENT_URL;
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL;
 
 export default function SensitiveDataScanner() {
   const { toast } = useToast();
