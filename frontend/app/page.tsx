@@ -199,7 +199,7 @@ export default function SensitiveDataScanner() {
   }, []);
 
   const renderSensitiveDataDetails = (sensitiveData: ScanResult['sensitiveData']) => {
-    if (!sensitiveData) return null;
+    if (!sensitiveData) return "No Sensitive data found";
     return Object.entries(sensitiveData).map(([category, fields]) => (
       <Card key={category} className="mb-2">
         <CardHeader>
