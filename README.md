@@ -50,7 +50,7 @@ Please note that the hosted services might be down at times due to server mainte
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/frontend.git
+   git clone https://github.com/pramaths/Aurva-backend-task.git
    cd frontend
    ```
 
@@ -71,9 +71,8 @@ Please note that the hosted services might be down at times due to server mainte
 
 ### Backend Setup (Express.js/Node.js)
 
-1. Clone the repository:
+1. Change the directory:
    ```bash
-   git clone https://github.com/your-repo/backend.git
    cd backend
    ```
 
@@ -151,7 +150,7 @@ MONGO_URI=your-mongo-uri
 
 ![alt text](image.png)  
 
-[Watch the demo video here](./demo.mp4)
+[Watch the demo video here](https://drive.google.com/file/d/1I3x-dp-BxvbDY6yH91WigGrFu3zDS02d/view?usp=sharing)
 
 ---
 
