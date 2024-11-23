@@ -150,7 +150,7 @@ MONGO_URI=your-mongo-uri
 
 ![alt text](image.png)  
 
-[Watch the demo video here](./demo.mp4)
+[Watch the demo video here](https://drive.google.com/file/d/1I3x-dp-BxvbDY6yH91WigGrFu3zDS02d/view?usp=sharing)
 
 ---
 
