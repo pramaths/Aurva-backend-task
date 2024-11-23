@@ -42,7 +42,7 @@ import { Toaster } from "@/components/ui/toaster";
 interface ScanResult {
   _id: string;
   fileName: string;
-  sensitiveData: {
+  sensitiveData?: {
     [category: string]: {
       [field: string]: string;
     };
@@ -199,6 +199,7 @@ export default function SensitiveDataScanner() {
   }, []);
 
   const renderSensitiveDataDetails = (sensitiveData: ScanResult['sensitiveData']) => {
+    if (!sensitiveData) return null;
     return Object.entries(sensitiveData).map(([category, fields]) => (
       <Card key={category} className="mb-2">
         <CardHeader>
@@ -304,7 +305,7 @@ export default function SensitiveDataScanner() {
                     <span>{result.fileName}</span>
                   </TableCell>
                   <TableCell>
-                    {Object.keys(result.sensitiveData).join(', ')}
+                    {result.sensitiveData ? Object.keys(result.sensitiveData).join(', ') : ''}
                   </TableCell>
                   <TableCell>
                     {new Date(result?.timestamp || Date.now()).toLocaleString()}
